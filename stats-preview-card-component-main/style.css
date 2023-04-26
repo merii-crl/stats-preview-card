@@ -1,0 +1,142 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: hsl(233, 47%, 7%);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  padding: 5%;
+}
+
+.component {
+  height: 380px;
+  width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 8px;
+  overflow: hidden;
+
+  background-color: hsl(244, 38%, 16%);
+}
+
+.img-overlay {
+  height: 380px;
+  width: 500px;
+
+  background-image: linear-gradient(to right bottom,
+      hsla(277, 55%, 39%, 0.5), hsla(276, 75%, 17%, 0.7)),
+    url("images/image-header-desktop.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.text {
+  padding: 4rem 5.4rem;
+}
+
+.text span {
+  color: hsl(277, 64%, 61%);
+}
+
+.title {
+  font-size: 3.2rem;
+  margin-bottom: 2rem;
+}
+
+.description {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: hsla(0, 0%, 100%, 0.6);
+  margin-bottom: 5.6rem;
+  line-height: 1.7;
+}
+
+p {
+  display: inline-block;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.features .description {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 1.8px;
+}
+
+.stat-heading,
+.title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  padding: 0.7rem;
+}
+
+.stat-heading {
+  font-size: 2rem;
+}
+
+/* Media Queries */
+@media (max-width:600px) {
+
+  .component {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: 1000px;
+
+  }
+
+  .text {
+    position: relative;
+    top: 230px;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 3.4rem;
+  }
+
+  .img-overlay {
+    height: 380px;
+    width: 380px;
+
+    position: relative;
+    bottom: 775px;
+  }
+
+  .features {
+    display: flex;
+    flex-direction: column;
+  }
+
+  p {
+    display: block;
+  }
+
+  .stat-heading {
+    font-size: 2.4rem;
+  }
+
+  .features .description {
+    font-size: 1.4rem;
+  }
+
+
+}
+
+@media (max-width:375px) {}
